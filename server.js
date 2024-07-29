@@ -10,12 +10,12 @@ app.use(json());
 
 dotenv.config();
 
-// "mongodb://localhost:27017/todo";
+const URL = "mongodb://localhost:27017/todo";
 
 const DB_URL = process.env.VITE_MONGO_URI;
 
 
-connect(DB_URL)
+connect(URL)
 	.then(() => {
 		console.log("Connected to MongoDB");
 	})
